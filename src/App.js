@@ -1,9 +1,9 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Products from './components/Products';
-import Customers from './components/Customers';
-import Contact from './components/Contact';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Products from "./components/Products";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Products />
-      <Customers />
+      <About />
       <Contact />
     </div>
   );
