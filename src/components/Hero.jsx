@@ -15,7 +15,7 @@ const Hero = () => {
         {/* Logo/Brand - Using your actual logo from public folder */}
         <div className="mb-8">
           <img
-            src="/aaf.jpeg"
+            src="/111.png"
             alt="Premium Meat Distribution Logo"
             className="w-full h-full object-contain p-4"
           />
