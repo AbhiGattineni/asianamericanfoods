@@ -22,8 +22,14 @@ jobs:
 
       - name: Install dependencies
         run: |
+          rm -f package-lock.json
+          npm cache clean --force
           npm install
-          npm audit fix --force
+
+      - name: Verify installation
+        run: |
+          npm list react-scripts
+          npm list tailwindcss
 
       - name: Build
         run: npm run build
