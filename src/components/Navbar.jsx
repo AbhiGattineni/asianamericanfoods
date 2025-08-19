@@ -54,10 +54,10 @@ const Navbar = () => {
             <div className="hidden sm:block">
               <h2
                 className={`font-display font-bold text-lg transition-colors ${
-                  isScrolled ? "text-gray-800" : "text-gray-800" // Changed to dark text always
+                  isScrolled ? "text-dark-500" : "text-dark-500" // Changed to dark text always
                 }`}
               >
-                Premium Meat Distribution
+                Asian American Foods
               </h2>
             </div>
           </div>
@@ -71,8 +71,8 @@ const Navbar = () => {
                 onClick={(e) => handleScroll(e, item.href)}
                 className={`font-medium transition-all duration-300 hover:scale-105 ${
                   isScrolled
-                    ? "text-gray-700 hover:text-primary-600"
-                    : "text-gray-800 hover:text-primary-600" // Changed to dark text
+                    ? "text-dark-300 hover:text-accent-500"
+                    : "text-dark-500 hover:text-accent-500" // Changed to dark text
                 }`}
               >
                 {item.name}
@@ -86,8 +86,8 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-md transition-colors ${
                 isScrolled
-                  ? "text-gray-700 hover:bg-gray-100"
-                  : "text-gray-800 hover:bg-white/20"
+                  ? "text-dark-300 hover:bg-dark-100"
+                  : "text-dark-500 hover:bg-white/20"
               }`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -107,7 +107,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
-                className="block px-4 py-3 font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors rounded-md mx-2"
+                className="block px-4 py-3 font-medium text-dark-300 hover:bg-accent-50 hover:text-accent-500 transition-colors rounded-md mx-2"
               >
                 {item.name}
               </a>

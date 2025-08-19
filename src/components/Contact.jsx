@@ -29,13 +29,13 @@ const Contact = () => {
       className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white relative overflow-hidden"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-golden-400 opacity-10 rounded-full transform -translate-x-32 -translate-y-32"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-sage-400 opacity-10 rounded-full transform translate-x-48 translate-y-48"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-accent-400 opacity-10 rounded-full transform -translate-x-32 -translate-y-32"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-golden-400 opacity-10 rounded-full transform translate-x-48 translate-y-48"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Get In <span className="text-golden-400">Touch</span>
+            Get In <span className="text-accent-300">Touch</span>
           </h2>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
             Ready to partner with us? Contact our team for quality meat
@@ -47,12 +47,12 @@ const Contact = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-3xl font-display font-bold mb-8">
-              Contact <span className="text-golden-400">Information</span>
+              Contact <span className="text-accent-300">Information</span>
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="bg-primary-800 rounded-xl p-6 border border-primary-700">
-                <MapPin className="text-golden-400 mb-3" size={24} />
+                <MapPin className="text-accent-300 mb-3" size={24} />
                 <h4 className="font-semibold mb-2">Location</h4>
                 <p className="text-primary-200 text-sm">
                   123 Fusion Street
@@ -64,7 +64,7 @@ const Contact = () => {
               </div>
 
               <div className="bg-primary-800 rounded-xl p-6 border border-primary-700">
-                <Phone className="text-golden-400 mb-3" size={24} />
+                <Phone className="text-accent-300 mb-3" size={24} />
                 <h4 className="font-semibold mb-2">Phone</h4>
                 <p className="text-primary-200 text-sm">
                   (555) 123-FOOD
@@ -74,7 +74,7 @@ const Contact = () => {
               </div>
 
               <div className="bg-primary-800 rounded-xl p-6 border border-primary-700">
-                <Mail className="text-golden-400 mb-3" size={24} />
+                <Mail className="text-accent-300 mb-3" size={24} />
                 <h4 className="font-semibold mb-2">Email</h4>
                 <p className="text-primary-200 text-sm">
                   info@asianamericanfoods.com
@@ -82,7 +82,7 @@ const Contact = () => {
               </div>
 
               <div className="bg-primary-800 rounded-xl p-6 border border-primary-700">
-                <Clock className="text-golden-400 mb-3" size={24} />
+                <Clock className="text-accent-300 mb-3" size={24} />
                 <h4 className="font-semibold mb-2">Business Hours</h4>
                 <p className="text-primary-200 text-sm">
                   Mon-Fri: 8AM-6PM
@@ -98,7 +98,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div>
             <h3 className="text-3xl font-display font-bold mb-8">
-              Send us a <span className="text-golden-400">Message</span>
+              Send us a <span className="text-accent-300">Message</span>
             </h3>
 
             <form
@@ -138,7 +138,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-golden-500 hover:bg-golden-600 text-primary-900 font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-accent-400 hover:bg-accent-500 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
                 >
                   Send Message
                   <Send size={18} />

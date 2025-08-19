@@ -8,28 +8,28 @@ const About = () => {
       title: "Quality Assurance",
       description:
         "We maintain the highest standards in meat quality and safety, ensuring every product meets industry regulations.",
-      icon: <Award className="text-4xl text-primary-600" />,
+      icon: <Award className="text-4xl text-accent-500" />,
     },
     {
       id: 2,
       title: "Reliable Delivery",
       description:
         "Our efficient distribution network ensures timely delivery to all our customers across the region.",
-      icon: <Target className="text-4xl text-primary-600" />,
+      icon: <Target className="text-4xl text-accent-500" />,
     },
     {
       id: 3,
       title: "Customer Satisfaction",
       description:
         "We prioritize building long-term relationships with our clients through exceptional service and support.",
-      icon: <Heart className="text-4xl text-primary-600" />,
+      icon: <Heart className="text-4xl text-accent-500" />,
     },
     {
       id: 4,
       title: "Industry Expertise",
       description:
         "Our team brings decades of experience in meat distribution and food service industry.",
-      icon: <Users className="text-4xl text-primary-600" />,
+      icon: <Users className="text-4xl text-accent-500" />,
     },
   ];
 
@@ -40,10 +40,10 @@ const About = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-4">
-            About <span className="text-primary-600">Us</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-dark-500 mb-4">
+            About <span className="text-accent-500">Us</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-dark-400 max-w-3xl mx-auto">
             Premium Meat Distribution was established with a commitment to
             delivering the highest quality meats to restaurants, retailers, and
             food service providers. Founded in 2020, we've built a reputation
@@ -54,10 +54,10 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
           {/* Company Story */}
           <div>
-            <h3 className="text-3xl font-display font-bold text-gray-800 mb-6">
-              Our <span className="text-primary-600">Story</span>
+            <h3 className="text-3xl font-display font-bold text-dark-500 mb-6">
+              Our <span className="text-accent-500">Story</span>
             </h3>
-            <div className="space-y-6 text-gray-600">
+            <div className="space-y-6 text-dark-400">
               <p className="text-lg leading-relaxed">
                 Premium Meat Distribution was established with a commitment to
                 delivering the highest quality meats to restaurants, retailers,
@@ -81,24 +81,24 @@ const About = () => {
 
           {/* Mission & Values */}
           <div>
-            <h3 className="text-3xl font-display font-bold text-gray-800 mb-6">
-              Mission & <span className="text-primary-600">Values</span>
+            <h3 className="text-3xl font-display font-bold text-dark-500 mb-6">
+              Mission & <span className="text-accent-500">Values</span>
             </h3>
             <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                <h4 className="font-semibold text-primary-600 mb-2 text-lg">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-dark-100">
+                <h4 className="font-semibold text-accent-500 mb-2 text-lg">
                   Our Mission
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-dark-400">
                   To provide the highest quality meat products with reliable
                   distribution services that exceed customer expectations.
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                <h4 className="font-semibold text-primary-600 mb-2 text-lg">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-dark-100">
+                <h4 className="font-semibold text-accent-500 mb-2 text-lg">
                   Our Vision
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-dark-400">
                   To be the leading meat distribution partner known for quality,
                   reliability, and exceptional service in the industry.
                 </p>
@@ -112,13 +112,13 @@ const About = () => {
           {values.map((value) => (
             <div
               key={value.id}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-dark-100 text-center"
             >
               <div className="flex justify-center mb-6">{value.icon}</div>
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+              <h4 className="text-xl font-semibold text-dark-500 mb-4">
                 {value.title}
               </h4>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-dark-400 leading-relaxed">
                 {value.description}
               </p>
             </div>

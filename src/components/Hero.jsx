@@ -8,24 +8,22 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-golden-50 relative overflow-hidden pt-16"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-primary-100 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-golden-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary-500 rounded-full opacity-10"></div>
+      <div className="absolute -bottom-48 -right-48 w-[500px] h-[500px] bg-accent-500 rounded-full opacity-10"></div>
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto">
         {/* Logo/Brand - Using your actual logo from public folder */}
         <div className="mb-8">
-          <div className="w-48 h-48 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-gray-100 overflow-hidden">
-            <img
-              src="/aaf-logo.png"
-              alt="Asian American Foods Logo"
-              className="w-full h-full object-contain p-4"
-            />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-gray-800 mb-4">
+          <img
+            src="/aaf.jpeg"
+            alt="Premium Meat Distribution Logo"
+            className="w-full h-full object-contain p-4"
+          />
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-dark-500 mb-4">
             Premium Meat
-            <span className="block text-primary-600">Distribution</span>
+            <span className="block text-accent-500">Distribution</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-dark-400 mb-8 font-light leading-relaxed">
             Quality meats, reliable delivery. Your trusted partner for premium
             meat distribution to restaurants and retailers.
           </p>
@@ -50,7 +48,7 @@ const Hero = () => {
         {/* Scroll indicator */}
         <div className="animate-bounce">
           <ChevronDown
-            className="mx-auto text-gray-400 cursor-pointer hover:text-primary-600 transition-colors"
+            className="mx-auto text-dark-300 cursor-pointer hover:text-accent-500 transition-colors"
             size={32}
             onClick={() => document.getElementById("products").scrollIntoView()}
           />
