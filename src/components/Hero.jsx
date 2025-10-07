@@ -12,20 +12,20 @@ const Hero = () => {
       <div className="absolute -bottom-48 -right-48 w-[500px] h-[500px] bg-accent-500 rounded-full opacity-10"></div>
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto">
-        {/* Logo/Brand - Using your actual logo from public folder */}
+        {/* Logo/Brand */}
         <div className="mb-8">
           <img
-            src="/111.png"
-            alt="Premium Meat Distribution Logo"
-            className="w-full h-full object-contain p-4"
+            src="/AAF-home.png"
+            alt="Asian American Foods Logo"
+            className="w-full h-64 max-h-64 object-contain p-4"
           />
           <h1 className="text-5xl md:text-7xl font-display font-bold text-dark-500 mb-4">
-            Premium Meat
-            <span className="block text-accent-500">Distribution</span>
+            Asian American
+            <span className="block text-accent-500">Foods</span>
           </h1>
           <p className="text-xl md:text-2xl text-dark-400 mb-8 font-light leading-relaxed">
-            Quality meats, reliable delivery. Your trusted partner for premium
-            meat distribution to restaurants and retailers.
+            We Slaughter Our Own Goats, the Texas Way and in Texas. 
+            HALAL Certified Slaughter House • USDA Approved Plant
           </p>
         </div>
 
