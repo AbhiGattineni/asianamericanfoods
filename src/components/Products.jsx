@@ -1,5 +1,5 @@
 import React from "react";
-import { Package, Truck, Shield, Star, MapPin, Phone } from "lucide-react";
+import { Package, Truck, Shield, Star, Phone } from "lucide-react";
 
 const Products = () => {
   const specialties = [

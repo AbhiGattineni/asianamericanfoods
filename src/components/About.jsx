@@ -1,5 +1,5 @@
 import React from "react";
-import { Target, Heart, Award, Users, MapPin } from "lucide-react";
+import { Target, Heart, Award, Users } from "lucide-react";
 
 const About = () => {
   const values = [
