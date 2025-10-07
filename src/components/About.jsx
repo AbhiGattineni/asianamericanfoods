@@ -1,36 +1,49 @@
 import React from "react";
-import { Target, Heart, Award, Users } from "lucide-react";
+import { Target, Heart, Award, Users, MapPin } from "lucide-react";
 
 const About = () => {
   const values = [
     {
       id: 1,
-      title: "Quality Assurance",
+      title: "HALAL Certification",
       description:
-        "We maintain the highest standards in meat quality and safety, ensuring every product meets industry regulations.",
+        "We maintain strict HALAL standards throughout our slaughter and processing operations, ensuring compliance with Islamic dietary laws.",
       icon: <Award className="text-4xl text-accent-500" />,
     },
     {
       id: 2,
-      title: "Reliable Delivery",
+      title: "USDA Approved Facility",
       description:
-        "Our efficient distribution network ensures timely delivery to all our customers across the region.",
+        "Our plant meets all USDA requirements for food safety and quality, ensuring the highest standards in meat processing.",
       icon: <Target className="text-4xl text-accent-500" />,
     },
     {
       id: 3,
-      title: "Customer Satisfaction",
+      title: "Direct Distribution",
       description:
-        "We prioritize building long-term relationships with our clients through exceptional service and support.",
+        "With warehouses in Detroit and Dallas, plus our own slaughterhouse, we control the entire supply chain from farm to table.",
       icon: <Heart className="text-4xl text-accent-500" />,
     },
     {
       id: 4,
-      title: "Industry Expertise",
+      title: "Texas Tradition",
       description:
-        "Our team brings decades of experience in meat distribution and food service industry.",
+        "We slaughter our own goats the Texas way, combining traditional methods with modern safety and quality standards.",
       icon: <Users className="text-4xl text-accent-500" />,
     },
+  ];
+
+  const retailLocations = [
+    "Farmington Hills, MI",
+    "Troy, MI",
+    "Jacksonville, FL",
+    "Naperville, IL",
+    "Columbus, OH",
+    "Cincinnati, OH",
+    "Austin, TX",
+    "St. Louis, MO",
+    "Indianapolis, IN",
+    "Schaumburgh, IL"
   ];
 
   return (
@@ -41,13 +54,11 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-dark-500 mb-4">
-            About <span className="text-accent-500">Us</span>
+            About <span className="text-accent-500">AAF</span>
           </h2>
           <p className="text-xl text-dark-400 max-w-3xl mx-auto">
-            Premium Meat Distribution was established with a commitment to
-            delivering the highest quality meats to restaurants, retailers, and
-            food service providers. Founded in 2020, we've built a reputation
-            for reliability, quality, and exceptional customer service.
+            Asian American Foods (AAF) is a HALAL certified, USDA approved meat processing and distribution company. 
+            We slaughter our own goats the Texas way, ensuring quality and authenticity in every product.
           </p>
         </div>
 
@@ -59,22 +70,19 @@ const About = () => {
             </h3>
             <div className="space-y-6 text-dark-400">
               <p className="text-lg leading-relaxed">
-                Premium Meat Distribution was established with a commitment to
-                delivering the highest quality meats to restaurants, retailers,
-                and food service providers. Founded in 2020, we've built a
-                reputation for reliability, quality, and exceptional customer
-                service.
+                Asian American Foods operates with a commitment to providing authentic, 
+                high-quality HALAL meat products to communities across the United States. 
+                Our Texas-based operations combine traditional methods with modern processing standards.
               </p>
               <p className="text-lg leading-relaxed">
-                Our team of experienced professionals brings together decades of
-                industry expertise, ensuring that every delivery meets the
-                highest standards of quality and safety in the meat distribution
-                industry.
+                With our own USDA approved slaughterhouse in Goldthwaite, Texas, and distribution 
+                centers in Detroit (20,000 SFT) and Dallas (15,000 SFT), we maintain complete 
+                control over our supply chain to ensure freshness and quality.
               </p>
               <p className="text-lg leading-relaxed">
-                We understand that quality meat is the foundation of great food
-                service, and we take pride in being the trusted partner that
-                restaurants and retailers rely on for their meat supply needs.
+                We specialize in goat, lamb, poultry, and seafood, offering budget-friendly options 
+                and custom cuts to meet diverse customer needs. Our motto "We can beat your current 
+                prices" reflects our commitment to providing value without compromising quality.
               </p>
             </div>
           </div>
@@ -90,8 +98,8 @@ const About = () => {
                   Our Mission
                 </h4>
                 <p className="text-dark-400">
-                  To provide the highest quality meat products with reliable
-                  distribution services that exceed customer expectations.
+                  To provide authentic, HALAL-certified meat products with reliable delivery 
+                  services, maintaining the highest standards of quality and religious compliance.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg border border-dark-100">
@@ -99,8 +107,8 @@ const About = () => {
                   Our Vision
                 </h4>
                 <p className="text-dark-400">
-                  To be the leading meat distribution partner known for quality,
-                  reliability, and exceptional service in the industry.
+                  To be the leading provider of HALAL meat products in America, known for 
+                  quality, authenticity, and exceptional customer service.
                 </p>
               </div>
             </div>
@@ -108,7 +116,7 @@ const About = () => {
         </div>
 
         {/* Core Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {values.map((value) => (
             <div
               key={value.id}
@@ -123,6 +131,31 @@ const About = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Retail Partner Locations */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12 shadow-lg border border-blue-200">
+          <h3 className="text-3xl font-display font-bold text-dark-500 mb-8 text-center">
+            Our Retail <span className="text-blue-600">Partner Locations</span>
+          </h3>
+          <div className="text-center mb-8">
+            <div className="bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <span className="text-2xl">🏪</span>
+            </div>
+            <h4 className="text-xl font-semibold text-blue-800 mb-4">Famous Meats Chain</h4>
+            <p className="text-blue-600 mb-8">
+              Find AAF products at these retail locations across the United States
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {retailLocations.map((location, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="text-blue-500 mb-2">📍</div>
+                <p className="text-sm font-medium text-dark-500">{location}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
