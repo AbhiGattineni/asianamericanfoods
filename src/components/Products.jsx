@@ -91,7 +91,7 @@ const Products = () => {
           </h2>
           <p className="text-xl text-dark-400 max-w-3xl mx-auto">
             HALAL certified and USDA approved meat products delivered fresh to
-            your doorstep. We can beat your current prices with free delivery
+            restaurants and stores. We can beat your current prices with free delivery
             and discounted cut prices.
           </p>
         </div>
@@ -160,12 +160,12 @@ const Products = () => {
         {/* Additional Information */}
         <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-display font-bold text-dark-500 mb-6">
-            Delivering All Your Meat Needs Right to Your Doorstep!
+            Supplying Premium Meat Products to Restaurants and Stores!
           </h3>
           <p className="text-lg text-dark-400 max-w-2xl mx-auto mb-8">
             With locations in Detroit (20,000 SFT Warehouse), Dallas (15,000 SFT
             Warehouse), and our own slaughterhouse in Goldthwaite, TX, we ensure
-            fresh, quality products reach you quickly.
+            fresh, quality products reach your business quickly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <div className="bg-white rounded-xl p-6 shadow-md">
@@ -225,7 +225,6 @@ const Products = () => {
               </div>
 
               <div className="text-center">
-                <p className="text-2xl font-bold text-green-800 mb-1">Kiran</p>
                 <p className="text-xl text-green-600 font-semibold">
                   (732) 781-8102
                 </p>

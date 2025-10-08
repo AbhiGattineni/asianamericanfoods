@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md overflow-hidden">
               <img
-                src="/aaf-logo.png"
+                src="/asianamericanfoods/aaf-logo.png"
                 alt="AAF"
                 className="w-full h-full object-contain p-1"
               />

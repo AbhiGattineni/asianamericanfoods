@@ -15,18 +15,28 @@ const Hero = () => {
         {/* Logo/Brand */}
         <div className="mb-8">
           <img
-            src="/AAF-home.png"
+            src="/asianamericanfoods/AAF-home.png"
             alt="Asian American Foods Logo"
             className="w-full h-64 max-h-64 object-contain p-4"
           />
+          
           <h1 className="text-5xl md:text-7xl font-display font-bold text-dark-500 mb-4">
             Asian American
             <span className="block text-accent-500">Foods</span>
           </h1>
-          <p className="text-xl md:text-2xl text-dark-400 mb-8 font-light leading-relaxed">
-            We Slaughter Our Own Goats, the Texas Way and in Texas. 
-            HALAL Certified Slaughter House • USDA Approved Plant
-          </p>
+          
+          {/* Condensed content into 3 lines */}
+          <div className="space-y-3 mb-8">
+            <p className="text-xl md:text-2xl text-dark-400 font-light leading-relaxed">
+              Premium HALAL Certified Meat Supplier - We Slaughter Our Own Goats the Texas Way
+            </p>
+            <p className="text-xl md:text-2xl text-dark-400 font-light leading-relaxed">
+              USDA Approved Plant • Free Delivery to Restaurants & Stores
+            </p>
+            <p className="text-xl md:text-2xl text-dark-400 font-light leading-relaxed">
+              Detroit & Dallas Warehouses • Budget-Friendly Options Available
+            </p>
+          </div>
         </div>
 
         {/* CTA Buttons */}

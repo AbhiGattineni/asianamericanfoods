@@ -21,7 +21,7 @@ const About = () => {
       id: 3,
       title: "Direct Distribution",
       description:
-        "With warehouses in Detroit and Dallas, plus our own slaughterhouse, we control the entire supply chain from farm to table.",
+        "With warehouses in Detroit and Dallas, plus our own slaughterhouse, we control the entire supply chain from farm to business.",
       icon: <Heart className="text-4xl text-accent-500" />,
     },
     {
@@ -71,17 +71,17 @@ const About = () => {
             <div className="space-y-6 text-dark-400">
               <p className="text-lg leading-relaxed">
                 Asian American Foods operates with a commitment to providing authentic, 
-                high-quality HALAL meat products to communities across the United States. 
+                high-quality HALAL meat products to restaurants and retail stores across the United States. 
                 Our Texas-based operations combine traditional methods with modern processing standards.
               </p>
               <p className="text-lg leading-relaxed">
                 With our own USDA approved slaughterhouse in Goldthwaite, Texas, and distribution 
                 centers in Detroit (20,000 SFT) and Dallas (15,000 SFT), we maintain complete 
-                control over our supply chain to ensure freshness and quality.
+                control over our supply chain to ensure freshness and quality for our business partners.
               </p>
               <p className="text-lg leading-relaxed">
                 We specialize in goat, lamb, poultry, and seafood, offering budget-friendly options 
-                and custom cuts to meet diverse customer needs. Our motto "We can beat your current 
+                and custom cuts to meet diverse restaurant and store needs. Our motto "We can beat your current 
                 prices" reflects our commitment to providing value without compromising quality.
               </p>
             </div>
@@ -98,8 +98,8 @@ const About = () => {
                   Our Mission
                 </h4>
                 <p className="text-dark-400">
-                  To provide authentic, HALAL-certified meat products with reliable delivery 
-                  services, maintaining the highest standards of quality and religious compliance.
+                  To provide authentic, HALAL-certified meat products with reliable distribution 
+                  services to restaurants and stores, maintaining the highest standards of quality and religious compliance.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg border border-dark-100">
@@ -107,8 +107,8 @@ const About = () => {
                   Our Vision
                 </h4>
                 <p className="text-dark-400">
-                  To be the leading provider of HALAL meat products in America, known for 
-                  quality, authenticity, and exceptional customer service.
+                  To be the leading B2B supplier of HALAL meat products in America, known for 
+                  quality, authenticity, and exceptional service to foodservice businesses.
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@ const About = () => {
             </div>
             <h4 className="text-xl font-semibold text-blue-800 mb-4">Famous Meats Chain</h4>
             <p className="text-blue-600 mb-8">
-              Find AAF products at these retail locations across the United States
+              Find AAF products at these retail store locations across the United States
             </p>
           </div>
           
