@@ -4,26 +4,49 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const slides = [
     {
       image: "/asianamericanfoods/images/chicken.jpg",
+      category: "Poultry • Halal Certified",
       title: "Premium Halal Chicken",
-      subtitle: "Fresh poultry delivered nationwide",
-      category: "Poultry"
+      subtitle:
+        "Supplying air-chilled, hand-slaughtered poultry with strict cold-chain controls for restaurant, retail, and institutional partners.",
+      tagline:
+        "From farm to fork, trusted by national brands and local kitchens alike.",
+      highlights: ["Custom cuts", "Same-day dispatch", "Temperature monitored"],
+    },
+
+    {
+      image: "/asianamericanfoods/images/fish.jpg",
+      category: "Seafood • Fresh & Frozen",
+      title: "Fresh Seafood",
+      subtitle:
+        "Premium seafood program featuring Atlantic, Pacific, and specialty imports—curated for wholesalers, retailers, and food service groups.",
+      tagline:
+        "Consistent quality with dock-to-door refrigeration and compliance.",
+      highlights: ["Sushi-grade options", "IQF processing", "Nationwide reach"],
     },
     {
-      image: "/asianamericanfoods/images/goat.jpg",
+      image: "/asianamericanfoods/images/chicken.jpg",
+      category: "Goat & Lamb • USDA Approved",
       title: "Quality Goat & Lamb",
-      subtitle: "Slaughtered the Texas way",
-      category: "Meat"
+      subtitle:
+        "Sourcing grass-fed goat and lamb, Zabiha Halal processed and precision trimmed to meet your culinary standards across North America.",
+      tagline:
+        "Reliability, traceability, and flavor in every wholesale delivery.",
+      highlights: ["Whole & primal", "Traceable sourcing", "Expert butchers"],
     },
     {
       image: "/asianamericanfoods/images/fish.jpg",
+      category: "Seafood • Fresh & Frozen",
       title: "Fresh Seafood",
-      subtitle: "Premium quality fish and shrimp",
-      category: "Seafood"
-    }
+      subtitle:
+        "Premium seafood program featuring Atlantic, Pacific, and specialty imports—curated for wholesalers, retailers, and food service groups.",
+      tagline:
+        "Consistent quality with dock-to-door refrigeration and compliance.",
+      highlights: ["Sushi-grade options", "IQF processing", "Nationwide reach"],
+    },
   ];
 
   useEffect(() => {
@@ -34,7 +57,8 @@ const Hero = () => {
   }, [slides.length]); // Added slides.length to dependencies
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <section id="home" className="relative h-screen pt-20">
@@ -59,60 +83,39 @@ const Hero = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center px-4 z-10">
-        <div className="max-w-5xl w-full">
-          {/* Category Badge */}
-          <span className="inline-block bg-teal-500 px-6 py-2 rounded-full text-white text-sm font-semibold mb-6">
-            {slides[currentSlide].category}
-          </span>
+      <div className="relative h-full flex items-center justify-center px-4 z-10">
+        <div className="w-full max-w-5xl">
+          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl text-center flex flex-col items-center min-h-[420px] md:min-h-[480px]">
+            <div className="w-full space-y-6 md:space-y-8 flex-1 flex flex-col justify-center">
+              {/* Category Badge */}
+              <div className="flex items-center justify-center gap-3 text-xs md:text-sm uppercase tracking-[0.35em] text-teal-200 min-h-[20px]">
+                <span className="h-2 w-2 rounded-full bg-teal-400"></span>
+                <span>{slides[currentSlide].category}</span>
+              </div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-            {slides[currentSlide].title}
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-6">
-            {slides[currentSlide].subtitle}
-          </p>
+              {/* Main Heading */}
+              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight md:leading-[1.1] min-h-[3.5rem] md:min-h-[4.5rem] flex items-center justify-center">
+                {slides[currentSlide].title}
+              </h1>
 
-          {/* Tagline */}
-          <p className="text-lg text-gray-300 mb-10">
-            Premium HALAL Certified • USDA Approved • Nationwide Delivery
-          </p>
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto min-h-[4.5rem] md:min-h-[5.5rem] flex items-center justify-center">
+                {slides[currentSlide].subtitle}
+              </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="tel:+17327818102"
-              className="bg-teal-500 text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-teal-600 transition-all shadow-xl"
-            >
-              Call: (732) 781-8102
-            </a>
-            <a
-              href="#products"
-              className="bg-white text-gray-900 font-bold text-lg px-10 py-4 rounded-lg hover:bg-gray-100 transition-all shadow-xl"
-            >
-              View Products
-            </a>
-          </div>
-
-          {/* Stats - Fixed Width Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 min-h-[100px] flex flex-col items-center justify-center">
-              <p className="text-3xl font-bold text-white mb-1 whitespace-nowrap">100+</p>
-              <p className="text-gray-200 text-sm whitespace-nowrap">Customers</p>
+              {/* Tagline */}
+              <p className="text-sm md:text-base text-teal-100 tracking-[0.3em] uppercase min-h-[1.5rem] flex items-center justify-center">
+                {slides[currentSlide].tagline}
+              </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 min-h-[100px] flex flex-col items-center justify-center">
-              <p className="text-3xl font-bold text-white mb-1 whitespace-nowrap">3</p>
-              <p className="text-gray-200 text-sm whitespace-nowrap">Locations</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 min-h-[100px] flex flex-col items-center justify-center">
-              <p className="text-3xl font-bold text-white mb-1 whitespace-nowrap">USA</p>
-              <p className="text-gray-200 text-sm whitespace-nowrap">Nationwide</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 min-h-[100px] flex flex-col items-center justify-center">
-              <p className="text-3xl font-bold text-white mb-1 whitespace-nowrap">USDA</p>
-              <p className="text-gray-200 text-sm whitespace-nowrap">Approved</p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center mt-8 w-full max-w-xl">
+              <a
+                href="#products"
+                className="bg-white/90 text-gray-900 font-semibold text-lg px-10 py-4 rounded-xl hover:bg-white transition-all shadow-xl"
+              >
+                View Products
+              </a>
             </div>
           </div>
         </div>

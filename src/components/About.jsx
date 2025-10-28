@@ -8,33 +8,36 @@ const About = () => {
       icon: "🏭",
       title: "Texas Slaughter House",
       location: "Goldthwaite, TX",
-      description: "USDA Approved Facility"
+      description: "USDA Approved Facility",
     },
     {
       icon: "📦",
       title: "Detroit Distribution",
       location: "Farmington Hills, MI",
-      description: "20,000 SFT Warehouse"
+      description: "20,000 SFT Warehouse",
     },
     {
       icon: "🏢",
       title: "Dallas Distribution",
       location: "Dallas, TX",
-      description: "15,000 SFT Warehouse"
-    }
+      description: "15,000 SFT Warehouse",
+    },
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-teal-50 to-white">
+    <section
+      id="about"
+      className="py-20 bg-gradient-to-b from-teal-50 to-white"
+    >
       <div className="max-w-7xl mx-auto px-4">
-        
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Us
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Premium HALAL certified meat supplier serving restaurants and stores across the United States
+            Premium HALAL certified meat supplier serving restaurants and stores
+            across the United States
           </p>
         </div>
 
@@ -46,10 +49,15 @@ const About = () => {
                 Our Story
               </h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Asian American Foods is a trusted HALAL certified and USDA approved meat processing and distribution company. We slaughter our own goats the Texas way at our Goldthwaite facility, ensuring the highest quality and authenticity.
+                Asian American Foods is a trusted HALAL certified and USDA
+                approved meat processing and distribution company. Ensuring the
+                highest quality and authenticity.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                With strategic distribution centers in Detroit and Dallas, we serve over 100 commercial customers nationwide, delivering fresh, premium products with competitive pricing and exceptional service.
+                With strategic distribution centers in Detroit and Dallas, we
+                serve over 100 commercial customers nationwide, delivering
+                fresh, premium products with competitive pricing and exceptional
+                service.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -91,20 +99,17 @@ const About = () => {
               <p className="text-teal-600 font-semibold mb-1">
                 {location.location}
               </p>
-              <p className="text-gray-600 text-sm">
-                {location.description}
-              </p>
+              <p className="text-gray-600 text-sm">{location.description}</p>
             </div>
           ))}
         </div>
 
         {/* Values Section */}
         <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-10 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">
-            We Serve The Entire USA
-          </h3>
+          <h3 className="text-3xl font-bold mb-4">We Serve The Entire USA</h3>
           <p className="text-lg mb-8 text-teal-50">
-            From coast to coast, delivering premium HALAL certified products to businesses nationwide
+            From coast to coast, delivering premium HALAL certified products to
+            businesses nationwide
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-medium border border-white/30">
@@ -121,7 +126,6 @@ const About = () => {
             </span>
           </div>
         </div>
-
       </div>
     </section>
   );
