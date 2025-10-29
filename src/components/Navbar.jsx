@@ -54,7 +54,7 @@ const Navbar = () => {
             className="flex items-center space-x-3"
           >
             <img
-              src="/asianamericanfoods/aaf-logo.png"
+              src={`${process.env.PUBLIC_URL}/images/aaf-logo.png`}
               alt="AAF Logo"
               className="h-12 w-12 object-contain hover:scale-110 transition-transform"
             />
