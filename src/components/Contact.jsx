@@ -19,7 +19,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+        <div className="grid mb-12">
           
           {/* Contact Info */}
           <div>
@@ -87,68 +87,6 @@ const Contact = () => {
               <p className="text-lg font-bold">📍 Serving the Entire USA</p>
             </div>
           </div>
-
-          {/* Contact Form */}
-          {/* <div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-teal-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send Us a Message
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name *"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your Email *"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Your Phone"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    placeholder="Your Message *"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none resize-none transition-all"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 rounded-lg transition-all flex items-center justify-center gap-2"
-                >
-                  <Send size={20} />
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div> */}
 
         </div>
 
