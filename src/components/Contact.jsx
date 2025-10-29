@@ -100,7 +100,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div>
+          {/* <div>
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-teal-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Us a Message
@@ -159,7 +159,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
 
         </div>
 
