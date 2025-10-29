@@ -7,7 +7,7 @@ const Hero = () => {
 
   const slides = [
     {
-      image: "/asianamericanfoods/images/chicken.jpg",
+      image: `${process.env.PUBLIC_URL}/images/chicken.jpg`,
       category: "Poultry • Halal Certified",
       title: "Premium Halal Chicken",
       subtitle:
@@ -18,7 +18,7 @@ const Hero = () => {
     },
 
     {
-      image: "/asianamericanfoods/images/fish.jpg",
+      image: `${process.env.PUBLIC_URL}/images/fish.jpg`,
       category: "Seafood • Fresh & Frozen",
       title: "Fresh Seafood",
       subtitle:
@@ -28,7 +28,7 @@ const Hero = () => {
       highlights: ["Sushi-grade options", "IQF processing", "Nationwide reach"],
     },
     {
-      image: "/asianamericanfoods/images/chicken.jpg",
+      image: `${process.env.PUBLIC_URL}/images/chicken.jpg`,
       category: "Goat & Lamb • USDA Approved",
       title: "Quality Goat & Lamb",
       subtitle:
@@ -38,7 +38,7 @@ const Hero = () => {
       highlights: ["Whole & primal", "Traceable sourcing", "Expert butchers"],
     },
     {
-      image: "/asianamericanfoods/images/fish.jpg",
+      image: `${process.env.PUBLIC_URL}/images/fish.jpg`,
       category: "Seafood • Fresh & Frozen",
       title: "Fresh Seafood",
       subtitle:
