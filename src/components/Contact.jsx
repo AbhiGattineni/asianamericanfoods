@@ -1,20 +1,9 @@
 // Contact.jsx - Updated Light Theme
-import React, { useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import React from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you! We'll contact you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-white to-teal-50">
