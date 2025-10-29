@@ -1,210 +1,175 @@
+// Contact.jsx - Updated Light Theme
 import React, { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    phone: "",
+    message: ""
   });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    alert("Thank you! We'll contact you soon.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white relative overflow-hidden"
-    >
-      <div className="absolute top-0 left-0 w-64 h-64 bg-accent-400 opacity-10 rounded-full transform -translate-x-32 -translate-y-32"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-golden-400 opacity-10 rounded-full transform translate-x-48 translate-y-48"></div>
-
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white to-teal-50">
+      <div className="max-w-7xl mx-auto px-4">
+        
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Get In <span className="text-accent-300">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Contact Us
           </h2>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            Ready to experience premium HALAL meat products? Contact us for
-            account setup and product information.
+          <p className="text-lg text-gray-600">
+            Get in touch for wholesale pricing and account setup
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Info - Compact Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+          
+          {/* Contact Info */}
           <div>
-            <h3 className="text-3xl font-display font-bold mb-6">
-              Contact <span className="text-accent-300">Information</span>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              Get In Touch
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-start gap-3">
-                <MapPin
-                  className="text-accent-300 flex-shrink-0 mt-1"
-                  size={20}
-                />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">
-                    Detroit Warehouse
-                  </h4>
-                  <p className="text-primary-200 text-xs leading-tight">
-                    23985 Industrial park dr
-                    <br />
-                    Farmington Hills, MI - 48335
-                    <br />
-                    20,000 SFT Distribution Center
-                  </p>
+            <div className="space-y-6">
+              {/* Phone */}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-teal-100">
+                <div className="flex items-start gap-4">
+                  <div className="bg-teal-100 p-3 rounded-lg">
+                    <Phone className="text-teal-600" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
+                    <p className="text-gray-600 text-sm mb-2">Call or WhatsApp</p>
+                    <a 
+                      href="tel:+17327818102" 
+                      className="text-teal-600 font-bold text-2xl hover:text-teal-700"
+                    >
+                      (732) 781-8102
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-start gap-3">
-                <MapPin
-                  className="text-accent-300 flex-shrink-0 mt-1"
-                  size={20}
-                />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">
-                    Dallas Warehouse
-                  </h4>
-                  <p className="text-primary-200 text-xs leading-tight">
-                    818 Metromedia pl
-                    <br />
-                    Dallas, TX
-                    <br />
-                    15,000 SFT Distribution Center
-                  </p>
+              {/* Email */}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-teal-100">
+                <div className="flex items-start gap-4">
+                  <div className="bg-teal-100 p-3 rounded-lg">
+                    <Mail className="text-teal-600" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-2">Email</h4>
+                    <p className="text-gray-600 text-sm">
+                      info@aafoods.us<br />
+                      dallas@aafoods.us<br />
+                      gw@aafoods.us
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-start gap-3">
-                <MapPin
-                  className="text-accent-300 flex-shrink-0 mt-1"
-                  size={20}
-                />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">Slaughterhouse</h4>
-                  <p className="text-primary-200 text-xs leading-tight">
-                    1110 E Front St
-                    <br />
-                    Goldthwaite, TX 76844
-                    <br />
-                    HALAL Certified • USDA Approved
-                  </p>
+              {/* Locations */}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-teal-100">
+                <div className="flex items-start gap-4">
+                  <div className="bg-teal-100 p-3 rounded-lg">
+                    <MapPin className="text-teal-600" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-2">Our Locations</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      <strong>Detroit:</strong> Farmington Hills, MI<br />
+                      <strong>Dallas:</strong> Dallas, TX<br />
+                      <strong>Plant:</strong> Goldthwaite, TX
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-start gap-3">
-                <Phone
-                  className="text-accent-300 flex-shrink-0 mt-1"
-                  size={20}
-                />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">
-                    Phone & Account Setup
-                  </h4>
-                  <p className="text-primary-200 text-xs leading-tight">
-                    Call/WhatsApp Kiran
-                    <br />
-                    (732) 781-8102
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-start gap-3 sm:col-span-2">
-                <Mail
-                  className="text-accent-300 flex-shrink-0 mt-1"
-                  size={20}
-                />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">Email Contacts</h4>
-                  <p className="text-primary-200 text-xs leading-tight">
-                    General: info@aafoods.us • Dallas: dallas@aafoods.us •
-                    Goldthwaite: gw@aafoods.us
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-primary-800 rounded-xl p-4 border border-primary-700 flex items-center gap-3 sm:col-span-2">
-                <Clock className="text-accent-300 flex-shrink-0" size={20} />
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm">Website</h4>
-                  <p className="text-primary-200 text-xs">www.aafoods.us</p>
-                </div>
-              </div>
+            {/* Serving USA Badge */}
+            <div className="bg-teal-500 rounded-xl p-6 text-center text-white mt-6">
+              <p className="text-lg font-bold">📍 Serving the Entire USA</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-3xl font-display font-bold mb-8">
-              Send us a <span className="text-accent-300">Message</span>
-            </h3>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-teal-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Send Us a Message
+              </h3>
 
-            <form
-              onSubmit={handleSubmit}
-              className="bg-primary-800 rounded-2xl p-8 border border-primary-700"
-            >
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-4 rounded-lg bg-primary-700 border border-primary-600 text-white placeholder-primary-300 focus:border-golden-400 focus:outline-none transition-colors"
-                />
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name *"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
+                  />
+                </div>
 
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-4 rounded-lg bg-primary-700 border border-primary-600 text-white placeholder-primary-300 focus:border-golden-400 focus:outline-none transition-colors"
-                />
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email *"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
+                  />
+                </div>
 
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full p-4 rounded-lg bg-primary-700 border border-primary-600 text-white placeholder-primary-300 focus:border-golden-400 focus:outline-none transition-colors resize-none"
-                />
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Your Phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    placeholder="Your Message *"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none resize-none transition-all"
+                  />
+                </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-accent-400 hover:bg-accent-500 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 rounded-lg transition-all flex items-center justify-center gap-2"
                 >
+                  <Send size={20} />
                   Send Message
-                  <Send size={18} />
                 </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
+
         </div>
 
-        {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-primary-700 text-center">
-          <p className="text-primary-300">
-            © 2024 Asian American Foods (AAF). All rights reserved. HALAL
-            Certified • USDA Approved Plant
-          </p>
-        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="max-w-7xl mx-auto px-4 pt-12 border-t border-teal-200 text-center">
+        <p className="text-gray-600 text-sm">
+          © 2024 Asian American Foods. All Rights Reserved. | HALAL Certified | USDA Approved
+        </p>
       </div>
     </section>
   );

@@ -1,20 +1,19 @@
+// Navbar.jsx - With Logo Image
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation items
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Products", href: "#products" },
@@ -22,98 +21,97 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  // Smooth scroll function
-  const handleScroll = (e, href) => {
+  const smoothScroll = (e, href) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setIsOpen(false);
     }
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
-          : "bg-white/10 backdrop-blur-sm" // Added subtle background for visibility
-      }`}
-    >
+    <nav className={`fixed w-full z-50 transition-all ${isScrolled ? "bg-white shadow-sm" : "bg-white/95"}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md overflow-hidden">
-              <img
-                src="/asianamericanfoods/aaf-logo.png"
-                alt="AAF"
-                className="w-full h-full object-contain p-1"
-              />
-            </div>
+        <div className="flex justify-between items-center h-20">
+          {/* Logo with Image */}
+          <a 
+            href="#home" 
+            onClick={(e) => smoothScroll(e, "#home")}
+            className="flex items-center space-x-3"
+          >
+            <img
+              src="/asianamericanfoods/aaf-logo.png"
+              alt="AAF Logo"
+              className="h-14 w-14 object-contain"
+            />
             <div className="hidden sm:block">
-              <h2
-                className={`font-display font-bold text-lg transition-colors ${
-                  isScrolled ? "text-dark-500" : "text-dark-500" // Changed to dark text always
-                }`}
-              >
-                Asian American Foods
-              </h2>
+              <h2 className="font-bold text-lg text-gray-800">Asian American Foods</h2>
+              <p className="text-xs text-teal-600 font-medium">HALAL Certified</p>
             </div>
-          </div>
+          </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                onClick={(e) => handleScroll(e, item.href)}
-                className={`font-medium transition-all duration-300 hover:scale-105 ${
-                  isScrolled
-                    ? "text-dark-300 hover:text-accent-500"
-                    : "text-dark-500 hover:text-accent-500" // Changed to dark text
-                }`}
+                onClick={(e) => smoothScroll(e, item.href)}
+                className="text-gray-600 hover:text-teal-600 font-medium transition-colors"
               >
                 {item.name}
               </a>
             ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md transition-colors ${
-                isScrolled
-                  ? "text-dark-300 hover:bg-dark-100"
-                  : "text-dark-500 hover:bg-white/20"
-              }`}
+            <a
+              href="tel:+17327818102"
+              className="flex items-center gap-2 bg-teal-500 text-white px-5 py-2.5 rounded-lg hover:bg-teal-600 transition-all font-medium"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+              <Phone size={16} />
+              <span className="hidden lg:inline">(732) 781-8102</span>
+            </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-gray-600"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden`}
-        >
-          <div className="py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-b-lg mt-2 shadow-lg">
-            {navItems.map((item) => (
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden pb-4">
+            <div className="space-y-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => smoothScroll(e, item.href)}
+                  className="block px-4 py-3 text-gray-600 hover:bg-teal-50 rounded-lg font-medium"
+                >
+                  {item.name}
+                </a>
+              ))}
               <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleScroll(e, item.href)}
-                className="block px-4 py-3 font-medium text-dark-300 hover:bg-accent-50 hover:text-accent-500 transition-colors rounded-md mx-2"
+                href="tel:+17327818102"
+                className="flex items-center justify-center gap-2 bg-teal-500 text-white px-4 py-3 rounded-lg font-medium mt-4"
               >
-                {item.name}
+                <Phone size={18} />
+                (732) 781-8102
               </a>
-            ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
