@@ -19,15 +19,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid mb-12">
+        <div className="mb-12">
           
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Get In Touch
             </h3>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {/* Phone */}
               <div className="bg-white rounded-xl p-6 shadow-sm border border-teal-100">
                 <div className="flex items-start gap-4">
@@ -83,7 +83,7 @@ const Contact = () => {
             </div>
 
             {/* Serving USA Badge */}
-            <div className="bg-teal-500 rounded-xl p-6 text-center text-white mt-6">
+            <div className="bg-teal-500 rounded-xl p-6 text-center text-white mt-8">
               <p className="text-lg font-bold">📍 Serving the Entire USA</p>
             </div>
           </div>
