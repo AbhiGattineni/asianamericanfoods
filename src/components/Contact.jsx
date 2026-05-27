@@ -43,12 +43,14 @@ const Contact = () => {
                     >
                       (732) 781-8102
                     </a>
-                    <div className="mt-3 flex items-center gap-2 text-sm text-gray-600">
-                      <MessageCircle className="text-teal-600" size={16} />
-                      <span>SMS:</span>
+                    <div className="mt-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                        <MessageCircle className="text-teal-600" size={16} />
+                        <span>SMS</span>
+                      </div>
                       <a
                         href="tel:+13252695223"
-                        className="font-bold text-teal-700 hover:text-teal-800"
+                        className="text-teal-600 font-bold text-2xl hover:text-teal-700 block"
                       >
                         325-269-5223
                       </a>
