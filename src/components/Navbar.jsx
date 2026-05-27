@@ -34,6 +34,8 @@ const Navbar = () => {
         behavior: "smooth",
       });
       setIsOpen(false);
+    } else {
+      window.location.href = `/${href}`;
     }
   };
 
