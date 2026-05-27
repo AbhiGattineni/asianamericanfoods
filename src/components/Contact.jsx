@@ -26,25 +26,33 @@ const Contact = () => {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {/* SMS Phone */}
+              {/* Phone */}
               <div className="bg-white rounded-xl p-6 shadow-sm border border-teal-100">
                 <div className="flex items-start gap-4">
                   <div className="bg-teal-100 p-3 rounded-lg">
-                    <MessageCircle className="text-teal-600" size={24} />
+                    <Phone className="text-teal-600" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-bold text-gray-900 mb-2">
-                      SMS Business Line
-                    </h4>
+                    <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
                     <p className="text-gray-600 text-sm mb-2">
-                      Vonage verification number
+                      Call or WhatsApp
                     </p>
                     <a
-                      href="tel:+13252695223"
-                      className="text-teal-600 font-bold text-2xl hover:text-teal-700"
+                      href="tel:+17327818102"
+                      className="text-teal-600 font-bold text-2xl hover:text-teal-700 block"
                     >
-                      325-269-5223
+                      (732) 781-8102
                     </a>
+                    <div className="mt-3 flex items-center gap-2 text-sm text-gray-600">
+                      <MessageCircle className="text-teal-600" size={16} />
+                      <span>SMS:</span>
+                      <a
+                        href="tel:+13252695223"
+                        className="font-bold text-teal-700 hover:text-teal-800"
+                      >
+                        325-269-5223
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
